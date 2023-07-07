@@ -1,5 +1,6 @@
 <?php 
 class StaticVariables{
+  //queries to create user  and products table
     static $user = "CREATE TABLE `users` (
         `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `email` varchar(70) NOT NULL,
@@ -15,6 +16,14 @@ class StaticVariables{
         `img_url` varchar(255) NOT NULL
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
 
+
+    
+
+
+      //TODO make this less painful to look at and create models 
+
+      //this is dummy data that gets inserted in user and products table
+    
     static $dataForProducts = "
 VALUES
     (NULL, 'Product 1', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus obcaecati possimus officia quisquam sit, iure corrupti animi optio temporibus dolor adipisci cupiditate blanditiis omnis labore repudiandae natus porro a.', 10.99, 'https://i.dummyjson.com/data/products/1/1.jpg'),

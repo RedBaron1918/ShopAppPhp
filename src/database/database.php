@@ -37,6 +37,7 @@ class Database
         }
     }
 
+    //todo ask nika if we should remove this 
     private function dropTableIfExists(): void
     {
         try {
