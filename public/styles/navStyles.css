@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 17px;
+}
+
+.cart {
+    width: 64px;
+    height: 64px;
+}
+
+.cart > img {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.ul-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.logo {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+}
+
+.logo img {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+
+.search-register {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.ul-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav {
+    min-width: 100%;
+}
