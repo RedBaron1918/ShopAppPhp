@@ -1,2 +1,5 @@
 <?php
-echo 'hello';
+include "./layouts/header.php";
+include "./components/footerContent.php";
+?>
+
