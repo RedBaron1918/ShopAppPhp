@@ -20,9 +20,9 @@ In this project, we follow a set of rules for our commit messages to make it eas
 
 ## Create DataBase With Script
 
--open up vscode terminal and run this two commands
+- open up vscode terminal and run this two commands
 
--cd src/database/
--php databaseInit.php
+- cd src/database/
+- php databaseInit.php
 
 congrats now you have shop_development database & users & products tables with dummy data!
