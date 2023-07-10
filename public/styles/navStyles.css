@@ -8,26 +8,20 @@ html  {
     
 }
 
-
-
-
-
-
-nav {
+.nav-header {
+    padding: 0px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 
 }
-
 .ul-hdr {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-bottom: 50px;
-
 }
 
 .ul-hdr :nth-child(5) {
@@ -71,18 +65,18 @@ nav {
     color: white;
 }
 
-nav {
-    padding: 0px !important;
-}
+
 
 .btnSearch {
     max-height: 38px;
 }
+/* 
 
-footer {
+todo misho: add this to logo
+
     background-color: #031832;
-}
 
+*/
 
 
 @media only screen and (min-width: 500px) {

@@ -1,3 +1,4 @@
-<?php 
-echo "This is HOME page.";
-?>
+<main class="container">
+    <?php include "./components/cards.php"; ?>
+
+</main>
