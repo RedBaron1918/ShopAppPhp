@@ -17,3 +17,12 @@ In this project, we follow a set of rules for our commit messages to make it eas
 - refactor: Use this when you've made code changes that neither fix a bug nor add a feature.
 
 - perf: This indicates a code change that improves performance.
+
+## Create DataBase With Script
+
+- open up vscode terminal and run this two commands
+
+- cd src/database/
+- php databaseInit.php
+
+congrats now you have shop_development database & users & products tables with dummy data!
