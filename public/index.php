@@ -1,5 +1,4 @@
-<?php
+<?php 
 include "./layouts/header.php";
-include "./components/footerContent.php";
-?>
-
+include "./pages/home.php";
+include "./layouts/footer.php";
