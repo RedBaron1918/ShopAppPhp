@@ -1,10 +1,10 @@
 <?php
 class Cards
 {
-  public $name;
-  public $price;
-  public $quantity;
-  public $img;
+  private $name;
+  private $price;
+  private $quantity;
+  private $img;
 
   function set_name($name)
   {
