@@ -1,0 +1,10 @@
+{
+    "require": {
+        "illuminate/database": "^10.15"
+    },
+    "autoload": {
+        "classmap": [
+            "src/models"
+        ]
+    }
+}
