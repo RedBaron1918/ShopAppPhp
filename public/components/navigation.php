@@ -1,114 +1,70 @@
 <?php
 $link_names_urls = [
-"./pages/home.php" => "Home",
-"./pages/faq.php" => "FAQ",
-"./pages/favorites.php" => "Favorites",
-"./pages/cart.php" => "Cart",
+  "./home.php" => "Home",
+  "./faq.php" => "FAQ",
+  "./favorites.php" => "Favorites",
+  "./cart.php" => "Cart",
 ];
-
-$logo = "./assets/images/logo.png";
-
+$logo = "../assets/images/logo.png";
 ?>
 
 
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary nav-header">
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary navi  container">
+  <?php include "../components/logo.php"; ?>
+
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse  navbar-collapse ul-search  center-ul" id="navbarSupportedContent">
-    <div class="ul-p w-100 my-3 container">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-hdr">
-        <?php include "./components/logo.php"; ?>
-        <?php
-      foreach ($link_names_urls as $link_name_path => $page_name) {
-        ?>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= $link_name_path ?>">
-            <?= $page_name; ?>
-          </a>
-        </li>
-        <?php }
-      ?>
-      <div class="btns">
-        <button type="button" class="btn btn-outline-primary btnSignin" data-bs-toggle="modal" data-bs-target="#exampleModalS">
-              Sign-in
-            </button>
-            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModalR">
-              Register
-            </button>
 
-      </div>
-    </ul>
+  <div class="collapse navbar-collapse ul-signin-reg-search " id="navbarSupportedContent">
+    <div class="ul-p w-100 container ">
+
+      <ul class="navbar-nav me-auto mb-0  ul-hdr ">
+        <?php
+        foreach ($link_names_urls as $link_name_path => $page_name) {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<?= $link_name_path; ?>">
+              <?= $page_name; ?>
+            </a>
+          </li>
+        <?php }
+        ?>
+
+        <div class="btns ">
+          <button type="button" class="btn btn-outline-primary btnSignin sign-in" data-bs-toggle="modal" data-bs-target="#exampleModalS">
+            Sign in
+          </button>
+
+
+          <button type="button" class="btn btn-outline-primary register" data-bs-toggle="modal" data-bs-target="#exampleModalR">
+            Register
+          </button>
+        </div>
+
+      </ul>
     </div>
-    <div class="search-register mb-3 container">
-      <div class="search">
+
+
+    <div class="search-register mb-3 container d-flex flex-column">
+
+      <!-- Search form here -->
+      <?php include "../components/search.php"; ?>
+
       <div class="signin-register">
-        <div class="modal fade " id="exampleModalS" tabindex="-1" aria-labelledby="exampleModalLabelS" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content ">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Sign-in</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form class="">
-                  <div class="mb-3 ">
-                    <input type="email" name="email" class="form-control" placeholder="Email" />
-                  </div>
-                  <div class="mb-5">
-                    <input type="password" name="password" class="form-control" placeholder="Password" />
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">
-                  Sign-in
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal fade" id="exampleModalR" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Your Account</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form action="" enctype="multipart/form-data">
-                  <div class="mb-3">
-                    <input type="text" name="firstName" class="form-control" placeholder="First Name" />
-                  </div>
-                  <div class="mb-3">
-                    <input type="text" name="lastName" class="form-control" placeholder="Last Name" />
-                  </div>
-                  <div class="mb-3">
-                    <input type="email" name="email" class="form-control" placeholder="Email" />
-                  </div>
-                  <div class="mb-3">
-                    <input type="password" name="password" class="form-control" placeholder="Password" />
-                  </div>
-                  <div class="mb-3">
-                    <input type="password" name="passwordRepeat" class="form-control" placeholder="Repeat Password" />
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">
-                  Create account
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- Sign-in here -->
+        <?php include "../components/sign-in.php"; ?>
+
+        <!-- Register here -->
+        <?php include "../components/register.php"; ?>
+        
       </div>
-        <form class="d-flex" role="search">
-          <input class="form-control me-3 mb-3 " type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-secondary btnSearch btn-outline-warning" type="submit">Search</button>
-        </form>
-      </div>
+
     </div>
+
   </div>
 </nav>
