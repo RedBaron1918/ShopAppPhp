@@ -4,29 +4,30 @@
     box-sizing: border-box;
 }
 html  {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+.navi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .nav-header {
     padding: 0px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
 .ul-hdr {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     width: 100%;
-    margin-bottom: 50px;
 }
 
 .ul-hdr :nth-child(5) {
     margin-bottom: 10px;
 }
+
 .logo {
     width: 70px;
     height: 70px;
@@ -47,6 +48,12 @@ html  {
     display: flex;
     align-items: center;
     justify-content: start;
+
+}
+.ul-hdr li{
+    border: 1px solid #0d6efd;
+    border-radius: 5px;
+    
 }
 .ul-hdr li {
     width: 120px;
@@ -63,20 +70,36 @@ html  {
 
 .ul-p .ul-hdr li:hover a {
     color: white;
+
 }
 
 
-
-.btnSearch {
-    max-height: 38px;
+.btns {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px !important;
+    
 }
-/* 
+.search-input-border {
+    box-shadow:  3px 3px 3px 0px rgb(157, 157, 151);
+}
 
-todo misho: add this to logo
 
-    background-color: #031832;
+.search {
+    margin-bottom: 0px !important;
+}
 
-*/
+.ul-signin-reg-search {
+    display: flex;
+    align-items: center !important;
+    flex-direction: column;
+    
+}
+.form-control:focus {
+    border: 1px solid #dee2e6;
+    box-shadow:  none;
+  }
+
 
 
 @media only screen and (min-width: 500px) {
@@ -86,23 +109,24 @@ todo misho: add this to logo
         justify-content: center!important;
         flex-direction: column;
         overflow-y: hidden;
+        padding: 0px;
     }
     .search-register {
         display: flex;
         flex-direction: column;
-        width: 90%;
-
+        padding: 0;
+        width: 100%;
     }
-    
-}
+    .ul-hdr li {
+        margin-bottom: 15px;
+    }
 
-
-/* @media only screen and (min-width: 475px) {
-    .nav {
-        display: flex;
+    .btns {
         flex-direction: column;
+
+        
     }
-
-
-
-} */
+    .btns :nth-child(1) {
+        margin-bottom: 10px;
+    }
+}
