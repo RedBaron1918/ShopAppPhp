@@ -6,14 +6,14 @@ class Database
     private string $username = "root";
     private string $password = "";
     private string $dbname = "shop_development";
-    private ?PDO $conn = null;
+    private ?PDO $con = null;
     private string $migrationQuery;
     private string $tableName;
 
     public function __construct(string $tableName)
     {
         $this->tableName = $tableName;
-        $this->conn = new PDO("mysql:host=$this->servername", $this->username, $this->password);
+        $this->con = new PDO("mysql:host=$this->servername", $this->username, $this->password);
     }
 
     public static function migrate(string $tableName, string $query, string $data): void
@@ -31,7 +31,7 @@ class Database
         try {
             $createDb = "CREATE DATABASE IF NOT EXISTS $this->dbname";
             $this->executeQuery($createDb);
-            $this->conn->exec("USE $this->dbname");
+            $this->con->exec("USE $this->dbname");
         } catch (PDOException $e) {
             throw new Exception("DB encountered a problem during creation: " . $e->getMessage());
         }
@@ -72,6 +72,6 @@ class Database
 
     private function executeQuery(string $query): void
     {
-        $this->conn->exec($query);
+        $this->con->exec($query);
     }
 }

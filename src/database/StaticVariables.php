@@ -3,9 +3,11 @@ class StaticVariables{
   //queries to create user  and products table
     static $user = "CREATE TABLE `users` (
         `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        `email` varchar(70) NOT NULL,
-        `username` varchar(70) NOT NULL,
-        `password` varchar(255) NOT NULL
+        `usersName` varchar(128) NOT NULL,
+        `usersLastName` varchar(128) NOT NULL,
+        `usersEmail` varchar(128) NOT NULL,
+        `usersPwd` varchar(128) NOT NULL,
+        `verify_token` varchar(128) NOT NULL
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
 
     static $products =  "CREATE TABLE `products` (
