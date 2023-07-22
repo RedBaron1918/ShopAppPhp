@@ -9,6 +9,8 @@ $rootDir = realpath($_SERVER["DOCUMENT_ROOT"]);
 
 $logo = "./assets/images/logo.png";
 session_start();
+$errors = isset($_SESSION['registration_errors']) ? $_SESSION['registration_errors'] : [];
+$loginError = isset($_SESSION['login_errors']) ? $_SESSION['login_errors'] : [];
 ?>
 
 
@@ -53,7 +55,7 @@ session_start();
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form class="">
+                <form action="/ShopAppPhp/src/actions/login.php" class="">
                   <div class="mb-3 ">
                     <input type="email" name="email" class="form-control" placeholder="Email" />
                   </div>
@@ -63,7 +65,7 @@ session_start();
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">
+                <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal" name="signin_btn">
                   Sign-in
                 </button>
               </div>
@@ -84,7 +86,7 @@ session_start();
                 </div>
             <?php unset($_SESSION['message']); } ?>
             <div class="modal-body ">
-                <form action="/ShopAppPhp/src/functions/register.php" method="POST">
+                <form action="/ShopAppPhp/src/actions/register.php" method="POST">
                     <div class="mb-3">
                         <input type="text" name="name" class="form-control" placeholder="Enter Your Name" />
                     </div>

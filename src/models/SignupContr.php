@@ -48,8 +48,8 @@ class SignupContr extends SignUp {
         return $this->checkUser($this->email);
     }
     private function redirectToIndexWithErrors(array $errors): void {
-        $errorUrl = '../../public/index.php?errors=' . implode(',', $errors);
-        header("Location: $errorUrl");
+        $_SESSION['registration_errors'] = $errors;
+        header("Location: ../../public/index.php");
         exit();
     }
 }
