@@ -42,11 +42,6 @@ class Cards
   }
 }
 
-
-
-
-
-
 $book = new Cards();
 $book->set_name("წიგნი");
 $book->set_price("30");
@@ -56,7 +51,7 @@ $book->set_img("https://image.shutterstock.com/image-photo/book-260nw-732217162.
 
 ?>
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-3 mb-3 ">
         <div class="card align-items-center text-center border-0 shadow-lg p-4   ">
