@@ -1,12 +1,14 @@
 <?php 
 class StaticVariables{
   //queries to create user  and products table
-    static $user = "CREATE TABLE `users` (
-        `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        `email` varchar(70) NOT NULL,
-        `username` varchar(70) NOT NULL,
-        `password` varchar(255) NOT NULL
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
+  static $user = "CREATE TABLE `users` (
+    `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `email` varchar(70) NOT NULL,
+    `name` varchar(70) NOT NULL,
+    `password` varchar(255) NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
+
 
     static $products =  "CREATE TABLE `products` (
         `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -41,10 +43,11 @@ VALUES
 
     static $dataForUsers = "
 VALUES
-    (NULL, 'user1@example.com', 'user1', 'password1'),
-    (NULL, 'user2@example.com', 'user2', 'password2'),
-    (NULL, 'user3@example.com', 'user3', 'password3')
+    (NULL, 'user1@example.com', 'user1', 'password1', CURRENT_TIMESTAMP),
+    (NULL, 'user2@example.com', 'user2', 'password2', CURRENT_TIMESTAMP),
+    (NULL, 'user3@example.com', 'user3', 'password3', CURRENT_TIMESTAMP)
     ";
+
 }
 
 ?>
