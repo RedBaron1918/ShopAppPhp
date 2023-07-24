@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +7,11 @@
         <link rel="stylesheet" href="./styles/navStyles.css">
         <link rel="stylesheet" href="./styles/sharedStyles.css">
 
-        <title>shop</title>
-</head>
 
+</head>
 <header>
 <?php
+include_once '../src/actions/config_session.php';
 
 include "./components/navigation.php";
 ?>
