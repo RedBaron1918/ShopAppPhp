@@ -91,8 +91,18 @@ header {
 
 .search {
   margin-bottom: 0px !important;
+  padding: 8px;
 }
-
+.btnSearch {
+  border: 1px solid gray !important;
+  border-radius: 6px;
+  color: white;
+  background-color: #0d6efd;
+}
+.btnSearch:hover {
+  background-color: cornflowerblue;
+  border: none;
+}
 .ul-signin-reg-search {
   display: flex;
   align-items: center !important;
