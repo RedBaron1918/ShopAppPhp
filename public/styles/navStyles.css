@@ -6,7 +6,12 @@
 html {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
+header {
+  width: 100%;
+}
+.navbar {
+  background-color: white !important;
+}
 .navi {
   display: flex;
   align-items: center;

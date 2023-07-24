@@ -26,7 +26,6 @@ session_start();
 <link type="text/css" rel="stylesheet" href="../css/style.css"/>
 <link type="text/css" rel="stylesheet" href="../css/accountbtn.css"/> 
 <link rel="stylesheet" href="../styles/navStyles.css">
-
         <title>shop</title>
 </head>
 

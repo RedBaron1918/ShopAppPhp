@@ -105,7 +105,7 @@
                             $update_password_run=mysqli_query($con,$update_password);
 
                             $_SESSION['status']="New password successfully updated";
-                            header("Location: login.php");
+                            header("Location: ../pages/home.php");
                             exit();
                         }else{
                             $_SESSION['status']="Did not  update password";
