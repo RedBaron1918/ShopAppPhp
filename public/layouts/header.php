@@ -9,6 +9,8 @@
 </head>
 <header>
 <?php
+include_once '../src/actions/config_session.php';
+
 include "./components/navigation.php";
 ?>
 </header>

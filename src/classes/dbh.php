@@ -15,4 +15,9 @@ class Dbh {
             throw new Exception("DB encountered a problem during creation: " . $e->getMessage());
         }
     }
+
+    protected function handleStatementFailure():void {
+        header("Location: ../../public/index.php?error=stmtfailed");
+        return;
+    }
 }

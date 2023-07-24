@@ -11,20 +11,19 @@ class SignupContr extends SignUp {
         $this->password = $password;
         $this->cpassword = $cpassword;
     }
-
+        static  $errors = [];
     public function signupUser() {
-        $errors = [];
         $validationMethods = ['emptyInput', 'isValidEmail', 'isValidName', 'passwordsMatch', 'isUserAvailable'];
-        $errorMessages = ['emptyinput', 'invalidemail', 'invalidname', 'passwordmatch', 'emailtaken'];
+        $errorMessages = ['Fill in all fields', 'Invalid email used', 'Invalid name used', 'Password did not match', 'Email is already taken'];
         foreach ($validationMethods as $index => $method) {
             if (!$this->$method()) {
-                $errors[] = $errorMessages[$index];
+               self::$errors[$method] = $errorMessages[$index];
             }
         }
-        if (!empty($errors)) {
-            $this->redirectToIndexWithErrors($errors);
+        if (!empty(self::$errors)) {
+            $this->redirectToIndexWithErrors(self::$errors);
         }
-        $this->setUser($this->name, $this->email, $this->password);
+        $this->setUser($this->email, $this->name, $this->password);
     }
     
     
@@ -48,6 +47,7 @@ class SignupContr extends SignUp {
         return $this->checkUser($this->email);
     }
     private function redirectToIndexWithErrors(array $errors): void {
+        require_once '../actions/config_session.php';
         $_SESSION['registration_errors'] = $errors;
         header("Location: ../../public/index.php");
         exit();

@@ -1,5 +1,7 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register_btn'])) {
+    
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -11,5 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register_btn'])) {
 
     $signup = new SignupContr($name, $email, $password, $cpassword);
     $signup->signupUser();
+    
     header("Location: ../../public/index.php");
 }
+?>
