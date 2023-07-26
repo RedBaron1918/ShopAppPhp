@@ -7,9 +7,8 @@ $link_names_urls = [
   "/ShopAppPhp/public/pages/favorites.php" => "Favorites",
   "/ShopAppPhp/public/pages/cart.php" => "Cart",
 ];
-
-
-$logo = $rootDir."/assets/images/logo.png";
+$logo = "/ShopAppPhp/public/assets/images/logo.png";
+$logoCompPath = $rootDir."/components/logo.php";
 ?>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary nav-header">
@@ -19,6 +18,7 @@ $logo = $rootDir."/assets/images/logo.png";
   <div class="collapse  navbar-collapse ul-search   center-ul" id="navbarSupportedContent">
     <div class="ul-p w-100 my-3 container">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-hdr">
+     <?php include $logoCompPath?>
         <?php
         foreach ($link_names_urls as $link_name_path => $page_name) {
         ?>

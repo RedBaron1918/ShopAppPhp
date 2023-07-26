@@ -73,13 +73,83 @@
   background-color: transparent;
   color: white;
 }
-.text{
+.text {
   display: none;
   border: 2px solid white;
   border-radius: 10px;
   color: white;
 }
-.active{
+
+.activeFaq {
   display: block;
 }
 
+.faq-heading {
+  border-bottom: #777;
+  padding: 20px 60px;
+}
+
+.faq-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.hr-line {
+  width: 60%;
+  margin: auto;
+}
+
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+  /* background-color: #eee; */
+  color: #444;
+  cursor: pointer;
+  padding: 30px 20px;
+  width: 60%;
+  border: none;
+  outline: none;
+  margin: auto;
+
+  /* Add the following properties for animation */
+  overflow: hidden;
+  transition: background-color 0.4s ease-in-out, max-height 0.4s ease-in-out;
+  max-height: 500px; /* Set a maximum height to allow the transition */
+}
+
+.faq-body {
+  margin: auto;
+  /* text-align: center; */
+  width: 50%;
+  padding: auto;
+
+  /* Add the following properties for animation */
+  max-height: 0; /* Set the initial height to 0 */
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.activeFaq,
+.faq-page:hover {
+  background-color: #f9f9f9;
+}
+
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+  padding: 0 18px;
+  background-color: white;
+}
+
+.faq-page:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.activeFaq:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
