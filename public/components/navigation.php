@@ -1,22 +1,24 @@
 <?php
+$rootDir = $_SERVER['DOCUMENT_ROOT'] . "/ShopAppPhp/public";
+
 $link_names_urls = [
-  "./index.php" => "Home",
-  "./pages/faq.php" => "FAQ",
-  "./pages/favorites.php" => "Favorites",
-  "./pages/cart.php" => "Cart",
+  "/ShopAppPhp/public/index.php" => "Home",
+  "/ShopAppPhp/public/pages/faq.php" => "FAQ",
+  "/ShopAppPhp/public/pages/favorites.php" => "Favorites",
+  "/ShopAppPhp/public/pages/cart.php" => "Cart",
 ];
-$rootDir = realpath($_SERVER["DOCUMENT_ROOT"]);
-$logo = "./assets/images/logo.png";
+
+
+$logo = $rootDir."/assets/images/logo.png";
 ?>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary nav-header">
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse  navbar-collapse ul-search  center-ul" id="navbarSupportedContent">
+  <div class="collapse  navbar-collapse ul-search   center-ul" id="navbarSupportedContent">
     <div class="ul-p w-100 my-3 container">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-hdr">
-        <?php include "./components/logo.php"; ?>
         <?php
         foreach ($link_names_urls as $link_name_path => $page_name) {
         ?>
