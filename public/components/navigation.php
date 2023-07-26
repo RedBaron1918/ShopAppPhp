@@ -2,7 +2,7 @@
 $rootDir = $_SERVER['DOCUMENT_ROOT'] . "/ShopAppPhp/public";
 
 $link_names_urls = [
-  "/ShopAppPhp/public/index.php" => "Home",
+  "/ShopAppPhp/public/pages/home.php" => "Home",
   "/ShopAppPhp/public/pages/faq.php" => "FAQ",
   "/ShopAppPhp/public/pages/favorites.php" => "Favorites",
   "/ShopAppPhp/public/pages/cart.php" => "Cart",
